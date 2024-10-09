@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 09:35:17 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/09 17:39:17 by acesar-m         ###   ########.fr       */
+/*   Created: 2024/10/09 17:28:00 by acesar-m          #+#    #+#             */
+/*   Updated: 2024/10/09 17:31:07 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c);
+void	*calloc(size_t nmemb, size_t size);
 
-int	ft_isdigit(int c)
+void	*calloc(size_t nmemb, size_t size)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	
 }

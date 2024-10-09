@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:56:13 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/08 16:08:02 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:19:50 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,4 @@ char *ft_strrchr(const char *str, int c)
     return result;
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-    char str[] = "Augusto";
-    
-    printf("%s\n", ft_strrchr(str, 'u'));
-    printf("%s", strrchr(str, 'u'));
-    return (0);
-}
 
