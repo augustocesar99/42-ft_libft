@@ -6,18 +6,17 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:44:39 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/08 15:08:06 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/10 09:14:58 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_toupper(char c);
+char	ft_toupper(char c);
 
-char ft_toupper(char c)
+char	ft_toupper(char c)
 {
-    if (c >= 97 && c <= 122)
-        c = c - 32;
-    return (c);
+	if (c >= 97 && c <= 122)
+		c = c - 32;
+	return (c);
 }
-
