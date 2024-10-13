@@ -29,20 +29,20 @@ char	*ft_strdup(const char *str)
 	return (copy);
 }
 
-// #include <stdio.h>
-// #include <string.h>
-// int main() {
-// 	char *original = "Heo, World!";
-// 	char *copy = strdup(original);
-// 	char *copy2 = ft_strdup(original);
-// 	if (copy == NULL) {
-// 		fprintf(stderr, "Falha ao duplicar a string.\n");
-// 		return 1;
-// 	}
-// 	printf("Original: %s\n", original);
-// 	printf("Cópia original: %s\n", copy);
-// 	printf("Cópia: %s\n", copy2);
-// 	free(copy);
-// 	free(copy2);
-// 	return 0;
-// }
+#include <stdio.h>
+#include <string.h>
+int main() {
+	char *original = "Heo, World!";
+	char *copy = strdup(original);
+	char *copy2 = ft_strdup(original);
+	if (copy == NULL) {
+		fprintf(stderr, "Falha ao duplicar a string.\n");
+		return 1;
+	}
+	printf("Original: %s\n", original);
+	printf("Cópia original: %s\n", copy);
+	printf("Cópia: %s\n", copy2);
+	free(copy);
+	free(copy2);
+	return 0;
+}
