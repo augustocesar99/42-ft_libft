@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:45:12 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/09 17:35:04 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/14 15:09:13 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ int	ft_atoi(const char *str)
 	int	result;
 	int	signal;
 
-	while (*str == ' ')
-		str++;
 	result = 0;
 	signal = 1;
+	if (!str)
+		return (0);
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
 	if (*str == '-')
 	{
 		signal = -1;
@@ -32,8 +34,7 @@ int	ft_atoi(const char *str)
 		str++;
 	while (*str >= '0' && *str <= '9')
 	{
-		result = result * 10 + (*str - '0');
-		str++;
+		result = result * 10 + (*str++ - '0');
 	}
 	return (signal * result);
 }

@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:26:50 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/11 13:13:25 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/14 13:21:21 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	ft_bzero(void *s, int size);
 
-void	ft_bzero(void *str, int size)
+void	ft_bzero(void *s, int size)
 {
 	unsigned char	*ptr;
-	int				i;
 
-	ptr = str;
-	i = 0;
-	while (i < size)
+	ptr = s;
+	while (size-- > 0)
 	{
-		ptr[i] = '0';
-		i++;
+		*ptr++ = 0;
 	}
 }
