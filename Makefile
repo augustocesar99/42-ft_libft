@@ -1,9 +1,9 @@
-NAME	=	exe_libft
+NAME = libft.a
 
 CC	=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 
-SRCS	=	ft_atoi.c\
+SRCS =		ft_atoi.c\
 			ft_bzero.c\
 			ft_calloc.c\
 			ft_isalnum.c\
@@ -37,13 +37,12 @@ SRCS	=	ft_atoi.c\
 			ft_substr.c\
 			ft_tolower.c\
 			ft_toupper.c
-
-OBJS	=	$(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+$(NAME): $(OBJS)
+	ar rcs $@ $^
 
 %.o:	%.c
 	$(CC) $(CFLAGS) -c $< -o $@
