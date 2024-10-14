@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:30:09 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/10 09:27:06 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/11 16:22:45 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dlen + i] = '\0';
 	return (dlen + slen);
 }
+
+

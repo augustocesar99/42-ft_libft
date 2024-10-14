@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:14:48 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/10 09:25:54 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/11 15:21:14 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	if (size == 0)
 		return (src_len);
 	i = 0;
-	while (i < size && src[i] != '\0')
+	while (i < size - 1 && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;

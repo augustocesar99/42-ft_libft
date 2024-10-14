@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:02:35 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/10 09:40:19 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/11 13:48:00 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 		d[i] = s[i];
 		i++;
 	}
-	d[i] = '\0';
 	return (dest);
 }
