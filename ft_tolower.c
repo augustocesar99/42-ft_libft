@@ -6,16 +6,15 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:00:31 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/10 09:16:39 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:25:05 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	ft_tolower(char c);
+int	ft_tolower(int c);
 
-char	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		c = c + 32;

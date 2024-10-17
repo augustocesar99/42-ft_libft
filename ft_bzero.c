@@ -6,15 +6,15 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:26:50 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/14 13:21:21 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:29:22 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, int size);
+void	ft_bzero(void *s, size_t size);
 
-void	ft_bzero(void *s, int size)
+void	ft_bzero(void *s, size_t size)
 {
 	unsigned char	*ptr;
 

@@ -6,23 +6,26 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:23:41 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/10 09:28:34 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/17 16:51:55 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c);
+char	*ft_strchr(const char *s, int c);
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while (*str != '\0')
+	size_t	count;
+
+	count = 0;
+	while (s[count] != '\0')
 	{
-		if (*str == c)
-			return ((char *)str);
-		str++;
+		if (s[count] == (char) c)
+			return ((char *)(s + count));
+		count++;
 	}
-	if (c == '\0')
-		return ((char *)str);
+	if ((char)c == '\0')
+		return ((char *)s + count);
 	return (NULL);
 }

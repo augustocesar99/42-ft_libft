@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:02:35 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/11 13:48:00 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:34:38 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t count);
 
 void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
+	size_t	i;
 
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
+	if (!dest && !src)
+		return (0);
 	i = 0;
 	while (i < count)
 	{
-		d[i] = s[i];
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
 	return (dest);

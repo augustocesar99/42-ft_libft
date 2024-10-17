@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:29:49 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/09 13:44:41 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:26:46 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,24 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	needle_len;
-	size_t	i;
-	size_t	j;
+	size_t	h;
+	size_t	n;
 
-	if (*needle == '\0')
+	h = 0;
+	if (needle[0] == '\0')
 		return ((char *)haystack);
-	needle_len = 0;
-	while (needle[needle_len] != '\0')
-		needle_len++;
-	if (len == 0 || len < needle_len)
-		return (NULL);
-	i = 0;
-	while (i <= len - needle_len)
+	while (haystack[h] != '\0')
 	{
-		j = 0;
-		while (j < needle_len && haystack[i + j] == needle[j])
-			j++;
-		if (j == needle_len)
-			return ((char *)(haystack + i));
-		i++;
+		n = 0;
+		while (haystack[h + n] == needle[n] && (h + n) < len)
+		{
+			if (haystack[h + n] == '\0' && needle[n] == '\0')
+				return ((char *)&haystack[h]);
+			n++;
+		}
+		if (needle[n] == '\0')
+			return ((char *)(haystack + h));
+		h++;
 	}
 	return (NULL);
 }

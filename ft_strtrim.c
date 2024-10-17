@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:15:07 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/14 12:41:10 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/15 10:42:48 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (n && ft_strchr(set, s1[n - 1]))
 		n--;
 	return (ft_substr(s1, 0, n));
-}
-
-#include <stdio.h>
-
-int main() {
-    char *s1 = "   ---Hello, World!---   ";
-    char *set = " -";
-    char *resultado = ft_strtrim(s1, set);
-
-    if (resultado) {
-        printf("Resultado: '%s'\n", resultado);
-        free(resultado);
-    }
-
-    return 0;
 }
