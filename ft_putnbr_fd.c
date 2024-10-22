@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:20:39 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/16 16:25:41 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/21 15:52:03 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	ln;
+	long	num;
 
-	ln = n;
-	if (ln < 0)
+	num = n;
+	if (num < 0)
 	{
 		ft_putchar_fd('-', fd);
-		ln *= -1;
+		num *= -1;
 	}
-	if (ln <= 9)
-		ft_putchar_fd(ln + '0', fd);
+	if (num <= 9)
+		ft_putchar_fd(num + '0', fd);
 	else
 	{
-		ft_putnbr_fd(ln / 10, fd);
-		ft_putnbr_fd(ln % 10, fd);
+		ft_putnbr_fd(num / 10, fd);
+		ft_putnbr_fd(num % 10, fd);
 	}
 }

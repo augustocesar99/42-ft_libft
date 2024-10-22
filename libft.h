@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 09:51:04 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/17 11:29:35 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:31:35 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,19 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 #endif

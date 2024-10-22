@@ -35,24 +35,47 @@ SRCS 	=		ft_atoi.c\
 			ft_substr.c\
 			ft_striteri.c\
 			ft_tolower.c\
-			ft_toupper.c
+			ft_toupper.c\
+			ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c
 
-OBJS	=	$(SRCS:.c=.o)
+BONUS_SRCS	=	ft_lstadd_front_bonus.c\
+				ft_lstlast_bonus.c\
+				ft_lstnew_bonus.c\
+				ft_lstsize_bonus.c\
+				ft_lstadd_back_bonus.c\
+				ft_lstdelone_bonus.c\
+				ft_lstclear_bonus.c\
+				ft_lstiter_bonus.c
 
-all:		$(NAME)
 
-$(NAME):	$(OBJS)
+OBJS		=	$(SRCS:.c=.o)
+OBJS_BONUS	=	$(BONUS_SRCS:.c=.o)
+
+ifdef WITH_BONUS
+	OBJ_SWITCH = $(OBJS_BONUS)
+else
+	OBJ_SWITCH = $(OBJS)
+endif
+
+all:		bonus $(NAME)
+
+$(NAME):	$(OBJ_SWITCH)
 			ar rcs $@ $^
 
 %.o:		%.c
 			$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-			rm -f $(OBJS)
+			rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean:	clean
 			rm -f $(NAME)
 
 re:			fclean all
+
+bonus:
+			$(MAKE) WITH_BONUS=1 $(NAME)
 
 .PHONY:		all clean fclean re

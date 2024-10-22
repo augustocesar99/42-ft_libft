@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 17:15:07 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/21 09:38:20 by acesar-m         ###   ########.fr       */
+/*   Created: 2024/10/22 15:30:18 by acesar-m          #+#    #+#             */
+/*   Updated: 2024/10/22 16:59:04 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set);
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	size_t	n;
+	t_list	*begin;
 
-	if (!s1 || !set)
-		return (0);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	n = ft_strlen(s1);
-	while (n && ft_strchr(set, s1[n - 1]))
-		n--;
-	return (ft_substr(s1, 0, n));
+	if (!lst || !*lst)
+		return ;
+	while (*lst != NULL)
+	{
+		begin = (*lst)->next;
+		ft_lstdelone((*lst), del);
+		(*lst) = begin;
+	}
 }
