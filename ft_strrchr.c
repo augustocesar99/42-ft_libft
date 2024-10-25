@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:56:13 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/17 16:57:48 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:53:14 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,10 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
+
+// int main(void)
+// {
+// 	char str[] = "Augusto Cesar";
+// 	printf("Resultado: %s", ft_strrchr(str, 't'));
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 17:28:00 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/10 14:27:11 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:42:36 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t num, size_t size)
 {
 	void	*rtn;
 
+	if (num != 0 && size > __SIZE_MAX__ / num)
+		return (NULL);
 	rtn = malloc(num * size);
 	if (rtn == NULL)
 		return (NULL);

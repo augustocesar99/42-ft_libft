@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:04:44 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/17 11:18:29 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/23 10:00:34 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ void	*ft_memset(void *dest, int value, size_t size);
 void	*ft_memset(void *dest, int value, size_t size)
 {
 	size_t			i;
-	unsigned char	*ptr;
+	unsigned char	*aux;
 	unsigned char	val;
 
-	ptr = (unsigned char *)dest;
+	aux = (unsigned char *)dest;
 	val = (unsigned char)value;
 	i = 0;
 	while (i < size)
 	{
-		ptr[i] = val;
+		aux[i] = val;
 		i++;
 	}
-	return (ptr);
+	return (aux);
 }
