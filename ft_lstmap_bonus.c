@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:19:51 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/25 12:31:07 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:27:27 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,25 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list *new;
+	t_list	*new_list;
+	t_list	*new_node;
+	t_list	*temp;
 
-    if (!lst)
-        return (NULL);
-    new = ft_lstnew(f(lst->content));
-    while (new && lst->next)
-    {
-        new->next = ft_lstmap(lst->next, f, del);
-        if (!new->next)
-        {
-            ft_lstclear(&new, del);
-            return (NULL);
-        }
-    }
-    return (new);
-}
-
-void	del_content(void *content)
-{
-    free(content);
+	new_list = NULL;
+	while (lst)
+	{
+		temp = ft_lstnew(f(lst->content));
+		if (!temp)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		if (!new_list)
+			new_list = temp;
+		else
+			new_node->next = temp;
+		new_node = temp;
+		lst = lst->next;
+	}
+	return (new_list);
 }
