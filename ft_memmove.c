@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:31:45 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/23 11:21:33 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:10:15 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (char *)src;
 	if (d < s)
 	{
-		while (n--)
-			*d++ = *s++;
+		ft_memcpy(d, s, n);
 	}
 	else
 	{

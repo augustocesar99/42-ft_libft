@@ -6,11 +6,12 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:39:32 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/28 11:26:21 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:12:04 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd);
 

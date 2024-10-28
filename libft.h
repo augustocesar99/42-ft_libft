@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 09:51:04 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/24 16:18:31 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:02:24 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <limits.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t size);

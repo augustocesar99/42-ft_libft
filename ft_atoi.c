@@ -6,11 +6,9 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:45:12 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/24 10:06:55 by acesar-m         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:57:35 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str);
 
