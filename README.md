@@ -1,7 +1,7 @@
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/ztl9x7JlhSlU4MWD6h/giphy.gif" width="200"/>
 
-<h1 align="center">libft</h1>
+<h1 align="center">ft_libft</h1>
 </div>
 
 <h2 align="center">
