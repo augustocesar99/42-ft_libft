@@ -1,8 +1,8 @@
 NAME 	=	libft.a
-CC		=	gcc
+CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 
-SRCS 	=		ft_atoi.c\
+SRCS	=	ft_atoi.c\
 			ft_bzero.c\
 			ft_calloc.c\
 			ft_isalnum.c\
