@@ -78,7 +78,7 @@
 * [`ft_lstmap`](https://github.com/PublioElio/School-42-libft/blob/main/ft_lstmap_bonus.c) - Aplica uma função ao conteúdo de todos os elementos da lista em uma nova lista.
 
 ## Requisitos
-A biblioteca é escrita em __linguagem C__ e requer o compilador `gcc`, com as bibliotecas padrão `<stdlib.h>` e `<unistd.h>` para rodar.
+A biblioteca é escrita em __linguagem C__ e requer o compilador `gcc`, com as bibliotecas padrão `<stdlib.h>` e `<unistd.h>` para rodar. Como usei a biblioteca `<unistd.h>` somente nas funções __fd__ então inclui a essa biblioteca somente nas proprias funções __fd__.
 
 ## Instruções
 
@@ -87,3 +87,28 @@ A biblioteca é escrita em __linguagem C__ e requer o compilador `gcc`, com as b
 Para compilar a biblioteca, vá até o diretório e execute:
 
 Para funções __básicas__:
+```
+$ make
+```
+
+Para funções __bonus__:
+```
+$ make bonus
+```
+
+### 2. Limpando todos os arquivos binários (.o) e executáveis ​​(.a)
+
+Para excluir todos os arquivos gerados com o make, vá até o caminho e execute:
+```
+$ make fclean
+```
+
+### 3. Usando-o em seu código
+
+Para usar as funções da biblioteca no seu código, basta incluir este cabeçalho:
+```
+#include "libft.h"
+```
+
+## Testers
+Esta biblioteca foi testada com [Francinette](https://github.com/xicodomingues/francinette) e [libftTester](https://github.com/Tripouille/libftTester).
