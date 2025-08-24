@@ -6,7 +6,7 @@
 /*   By: acesar-m <acesar-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 09:51:04 by acesar-m          #+#    #+#             */
-/*   Updated: 2024/10/28 15:02:24 by acesar-m         ###   ########.fr       */
+/*   Updated: 2025/08/24 18:08:25 by acesar-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdarg.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t size);
@@ -29,6 +31,10 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t count);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *dest, int value, size_t size);
+int		print_base(long long n, char *base, int div);
+int		print_str(char *str);
+int		print_char(char c);
+int		print_point(unsigned long p);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);

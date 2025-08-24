@@ -1,6 +1,8 @@
 NAME 	=	libft.a
 CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
+RM			=	rm -rf
+HEADER		=	libft.h
 
 SRCS	=	ft_atoi.c\
 			ft_bzero.c\
@@ -16,6 +18,8 @@ SRCS	=	ft_atoi.c\
 			ft_memcpy.c\
 			ft_memmove.c\
 			ft_memset.c\
+			ft_printf.c\
+			ft_printf_utils.c\
 			ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
@@ -36,9 +40,6 @@ SRCS	=	ft_atoi.c\
 			ft_striteri.c\
 			ft_tolower.c\
 			ft_toupper.c\
-			ft_lstnew_bonus.c\
-			ft_lstadd_front_bonus.c\
-			ft_lstsize_bonus.c
 
 BONUS_SRCS	=	ft_lstadd_front_bonus.c\
 				ft_lstlast_bonus.c\
@@ -54,29 +55,27 @@ BONUS_SRCS	=	ft_lstadd_front_bonus.c\
 OBJS		=	$(SRCS:.c=.o)
 OBJS_BONUS	=	$(BONUS_SRCS:.c=.o)
 
-ifdef WITH_BONUS
-	OBJ_SWITCH = $(OBJS_BONUS)
-else
-	OBJ_SWITCH = $(OBJS)
+ifeq ($(findstring bonus, $(MAKECMDGOALS)), bonus)
+	OBJS += $(OBJS_BONUS)
 endif
 
-all:		bonus $(NAME)
+all: $(NAME)
 
-$(NAME):	$(OBJ_SWITCH)
-			ar rcs $@ $^
+bonus:		$(NAME)
 
-%.o:		%.c
+$(NAME):	$(OBJS)
+			ar rcs $@ $?
+
+%.o:	%.c	$(HEADER)
 			$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-			rm -f $(OBJS) $(OBJS_BONUS)
+			$(RM) $(OBJS) $(OBJS_BONUS)
 
-fclean:	clean
-			rm -f $(NAME)
+fclean:		clean
+			$(RM) $(NAME)
 
 re:			fclean all
 
-bonus:
-			$(MAKE) WITH_BONUS=1 $(NAME)
 
-.PHONY:		all clean fclean re
+.PHONY:		all bonus clean fclean re
